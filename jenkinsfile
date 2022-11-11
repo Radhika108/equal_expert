@@ -3,7 +3,6 @@ pipeline {
     agent any
     tools {
         go 'go'
-        docker 'docker'
     }
     environment {
         GO114MODULE = 'on'
