@@ -14,7 +14,7 @@ pipeline {
         stage("unit-test") {
             steps {
                 echo 'UNIT TEST EXECUTION STARTED'
-                go test
+                sh 'go test'
             }
         }
    
