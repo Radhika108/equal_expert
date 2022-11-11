@@ -2,9 +2,6 @@ pipeline {
 
     agent any
 
-    tools {
-        go 'go1.14'
-    }
     environment {
         GO114MODULE = 'on'
         CGO_ENABLED = 0 
@@ -27,8 +24,6 @@ pipeline {
         stage("build") {
             steps {
                 echo 'BUILD EXECUTION STARTED'
-                sh 'go version'
-                sh 'go get ./...'
                 sh 'docker build . -t equalexpert:latest'
             }
         }
